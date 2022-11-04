@@ -36,5 +36,10 @@
 }
 
 .task.done span{
-    text-decoration: underline;
+    text-decoration: line-through;
+}
+
+.error{
+    color: red;
+    text-decoration: bold;
 }
