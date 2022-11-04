@@ -23,10 +23,15 @@
         <div class="input-area">
 
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                @keyup.enter="createTask()"
+                v-model.trim="newMessageString"></textarea>
                 <label for="floatingTextarea">Inserisci qui la task che vuoi aggiungere</label>
               </div>
-            <button type="button" class="btn btn-outline-primary m-4">Aggiungi</button>
+            <button 
+            type="button" 
+            @click="createTask()"
+            class="btn btn-outline-primary m-4">Aggiungi</button>
             <p class="error">{{errorString}}</p>
         </div>
 

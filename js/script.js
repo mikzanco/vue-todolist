@@ -5,6 +5,7 @@ createApp({
         return{
             logoImg: 'img/logo.png',
             errorString: '',
+            newMessageString: '',
             tasks:[
                 {
                     text: 'Portare fuori la spazzatura',
@@ -29,6 +30,19 @@ createApp({
             }else{
                 console.log('error');
                 this.errorString = 'Attento devi fare il task prima di eliminarlo'
+            }
+        },
+        createTask(){
+            this.errorString ='';
+            if(this.newMessageString < 5){
+                this.errorString = 'Attenzione la task aggiunta ha meno di 5 caratteri e non va bene';
+            }else{
+                const newTask ={
+                    text: this.newMessageString,
+                    done: false,
+                }
+                this.tasks.unshift(newTask);
+                this.newMessageString = '';
             }
         }
         
