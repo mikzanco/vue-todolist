@@ -36,7 +36,7 @@
         </div>
 
         <div class="task-area">
-            <ul>
+            <ul v-if="tasks.length > 0">
                 
                 <li 
                 v-for="(task, index) in tasks"
