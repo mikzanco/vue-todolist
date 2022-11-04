@@ -1,7 +1,7 @@
 const{createApp} = Vue;
 
 createApp({
-    
+
     data(){
         return{
             logoImg: 'img/logo.png',
@@ -35,8 +35,9 @@ createApp({
         },
         createTask(){
             this.errorString ='';
-            if(this.newMessageString < 5){
+            if(this.newMessageString.length < 5){
                 this.errorString = 'Attenzione la task aggiunta ha meno di 5 caratteri e non va bene';
+                
             }else{
                 const newTask ={
                     text: this.newMessageString,
@@ -44,6 +45,11 @@ createApp({
                 }
                 this.tasks.unshift(newTask);
                 this.newMessageString = '';
+
+                // verificare se la nuova task che si va ad inserire è gia presente nelel task 
+                // if(newTask === tasks.text ){
+                //     console.log('error');
+                // }
             }
         }
         
