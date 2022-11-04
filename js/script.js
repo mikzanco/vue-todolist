@@ -38,6 +38,9 @@ createApp({
             if(this.newMessageString.length < 5){
                 this.errorString = 'Attenzione la task aggiunta ha meno di 5 caratteri e non va bene';
                 
+            }else if(this.newMessageString === tasks.text){
+                
+                console.log('error');
             }else{
                 const newTask ={
                     text: this.newMessageString,
@@ -47,9 +50,7 @@ createApp({
                 this.newMessageString = '';
 
                 // verificare se la nuova task che si va ad inserire è gia presente nelel task 
-                // if(newTask === tasks.text ){
-                //     console.log('error');
-                // }
+                
             }
         }
         
