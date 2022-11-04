@@ -7,3 +7,34 @@
 .logo img{
     width: 300px;
 }
+
+.logo, .input-area{
+    text-align: center;
+    padding: 20px;
+}
+.container{
+    width: 70%;
+    padding: 20px 0;
+    /* margin: 0 auto; */
+}
+
+.task-area{
+    background-color: #f5f7f7;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgb(117, 117, 117);
+}
+
+.task:hover{
+    background-color: white;
+}
+
+.task.done span{
+    text-decoration: underline;
+}
